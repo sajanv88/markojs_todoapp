@@ -1,10 +1,10 @@
-# Thanks for checking out Marko
+# A simple todo application built using markojs
 
 # Installation
 
 ```
-npx @marko/create marko-app --template basic
-cd marko-app
+git clone repo
+cd markojs_todoapp
 npm install
 npm run dev
 ```
@@ -16,6 +16,8 @@ This project is powered by `@marko/serve` and `@marko/build`.
 - Run `npm run dev` to start the development server
 - Run `npm run build` to build a production-ready node.js server
 - Run `npm start` to run the production server
+
+# Learn more about markojs 
 
 ## Adding Pages
 
