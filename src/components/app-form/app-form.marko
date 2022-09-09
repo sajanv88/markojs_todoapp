@@ -1,0 +1,65 @@
+<form class=['form', input.invalid ? 'form--error' : ''] on-submit('onSubmitHandler')>
+    <div.form__input>
+        <input type="text" name="title" placeholder="Title" />
+    </div>
+    <div.form__text-area>
+        <textarea name="description" rows="8" cols="40" placeholder="Description" />
+    </div>
+    <div.form__controls>
+        <app-button.submit-btn type="submit">
+            Submit
+        </app-button>    
+    </div>
+</form>
+
+style {
+    .form__input,
+    .form__text-area,
+    .form__controls {
+        padding: .6rem 0 .6rem 0;
+    }
+    .form__input input,
+    .form__text-area textarea {
+        padding: 1.2rem;
+        width: 100%;
+        border: none;
+    }
+    .form__controls {
+        display: flex;
+        justify-content: end;
+    }
+    .form__controls .submit-btn {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 720px) {
+        .form__controls .submit-btn {
+            max-width: 20%;
+        }
+    }
+
+    .form--error {
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+
+    @keyframes shake {
+        10%, 90% {
+            transform: translate3d(-1px, 0, 0);
+        }
+        
+        20%, 80% {
+            transform: translate3d(2px, 0, 0);
+        }
+
+        30%, 50%, 70% {
+            transform: translate3d(-4px, 0, 0);
+        }
+
+        40%, 60% {
+            transform: translate3d(4px, 0, 0);
+        }
+    }
+}

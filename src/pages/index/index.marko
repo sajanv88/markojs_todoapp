@@ -1,18 +1,41 @@
 <app-layout title="Welcome to Marko">
-  <mouse-mask.container>
-    <header>
-      <img.logo src="./logo.svg" alt="Marko"/>
-    </header>
-    <main>
-      <p>Edit <code>./pages/index.marko</code> and save to reload.</p>
-      <a href="https://markojs.com/docs/getting-started">
-        Learn Marko
-      </a>
-    </main>
-  </mouse-mask>
+  <home />
 </app-layout>
 
+
+
 style {
+  .header {
+    background-color: black;
+    padding: 1.2rem;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .title, .sub-title {
+    color: white;
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  .create-btn {
+    flex: 1;
+  }
+
+  .sub-title {
+    font-size: 1.2rem;
+    padding-left: .6rem;
+    flex: 1;
+   }
+
+   .sub-title::before {
+    content: '( ';
+   }
+
+   .sub-title::after {
+    content: ' )';
+   }
+
   .container {
     display:flex;
     flex-direction: column;
@@ -28,3 +51,4 @@ style {
     width:400px;
   }
 }
+

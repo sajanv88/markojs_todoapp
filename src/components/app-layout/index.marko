@@ -10,20 +10,34 @@ import favicon from "./favicon.png";
   <title>${input.title}</title>
 </head>
 <body>
-  <${input.renderBody}/>
+  <div.layout>
+    <${input.renderBody}/>
+  </div>
 </body>
 </html>
 
 style {
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+  html {
+    font-size: 62.5%;
+  }
   html, body {
-    font-family: system-ui;
+    font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
+
+  }
+  * {
+    box-sizing: border-box;
   }
   code {
     color: #fc0;
   }
   a {
     color: #09c;
+  }
+
+  .layout {
+    padding: 1.8rem;
   }
 }

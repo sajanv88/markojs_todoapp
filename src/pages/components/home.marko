@@ -1,0 +1,24 @@
+<div.home>
+     <header.header>
+        <h1.title>Marko</h1>
+        <h2.sub-title>Todo App</h2>
+        <app-button.create-btn on-click('handleClick')>
+          Create
+        </app-button>
+    </header>
+    <main>
+      <if(state.showDialog)>
+            <app-dialog title="Create Todo" on-click('handleDialogClose')>
+                <div.create-form>
+                   <app-form 
+                    on-submitEvent('handleFormSubmit')
+                    invalid=state.formInvalid/>
+                </div>
+            </app-dialog>
+      </if>
+      <if(state.todos.length > 0)>
+            <app-list items=state.todos on-click('handleDelete')/>
+      </if>
+    </main>
+</div>
+

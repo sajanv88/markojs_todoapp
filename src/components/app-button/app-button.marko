@@ -1,0 +1,22 @@
+$ const {renderBody} = input;
+<button 
+    class=[input.class, 'btn'] 
+    type=input.type || 'button'
+    on-click('emitClickEvent')>
+    <${renderBody}/>
+</button>
+
+style {
+    .btn {
+        padding: 1.2rem .6rem;
+        background-color: var(--btn-bg, #0369a1);
+        color: var(--btn-text-color, #ffffff);
+        border: none;
+        transition: background-color 250ms ease-in;
+        font-size: 1.6rem;
+    }
+    .btn:hover {
+        --btn-bg: #075985;
+    }
+    
+}

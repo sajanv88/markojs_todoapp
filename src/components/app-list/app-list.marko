@@ -1,0 +1,38 @@
+<div.list>
+    <for|item| of=input.items>
+        <div.list__item value=item.id>
+            <h2.list__item--title>${item.title}</h2>
+            <p.list__item--description>${item.description}</p>
+            <app-button.list__item--action on-click('onDeleteHandler', item.id)>Delete</app-button>
+        </div>
+    </for>
+</div>
+
+style {
+    .list {
+      margin-top: 1.2rem;
+    }
+    .list__item {
+        display: grid;
+        grid-template-areas: "title action"
+                             "description description";
+        background-color: var(--list-item-bg, #e2e8f0);
+        padding: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .list__item--title {
+        grid-area: title;
+        font-size: 1.8rem;
+    }
+    .list__item--description {
+        grid-area: description;
+        font-size: 1.6rem;
+    }
+    .list__item--action {
+        grid-area: action;
+        max-width: 12rem;
+        min-width: 10rem;
+        justify-self: end;
+        align-self: baseline;
+    }
+}
