@@ -1,4 +1,4 @@
-FROM node:16.13.2-alpine
+FROM --platform=linux/amd64  node:16.13.2-alpine
 WORKDIR /app
 COPY . .
 RUN npm install
